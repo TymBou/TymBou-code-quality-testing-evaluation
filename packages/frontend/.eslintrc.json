@@ -1,0 +1,22 @@
+{
+    "extends": [
+      "react-app",
+      "plugin:react-hooks/recommended",
+      "plugin:jsx-a11y/recommended"
+    ],
+    "plugins": ["react-hooks", "jsx-a11y", "import"],
+    "rules": {
+      "import/order": [
+        "error",
+        {
+          "groups": ["builtin", "external", "internal", "parent", "sibling", "index"],
+          "newlines-between": "always",
+          "alphabetize": { "order": "asc", "caseInsensitive": true }
+        }
+      ]
+    },
+    "env": {
+      "browser": true,
+      "es2021": true
+    }
+  }
