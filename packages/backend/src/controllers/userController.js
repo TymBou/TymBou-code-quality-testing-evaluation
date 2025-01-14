@@ -9,8 +9,7 @@ exports.registerUser = (req, res) => {
 
     const database = db.getDb();
 
-    database.run(
-        `INSERT INTO users (username, password, firstname, lastname) VALUES (?, ?, ?, ?)`,
+    database.run(        `INSERT INTO users (username, password, firstname, lastname) VALUES (?, ?, ?, ?)`,
         [username, hashedPassword, firstname, lastname],
         function(err) {
             if (err) {
